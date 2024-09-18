@@ -1,0 +1,35 @@
+phone={}
+print("1.ADD NUMBER")
+print("2.SEARCH NUMBER")
+print("3.DELETE CONTACT")
+print("4.UPDATE A NUMBER")
+print("5.EXIT")
+while True:
+    a=input("Enter the choice:")
+    if a=='1':
+        u=input("Enter the name of the usser:")
+        p=input("Enter the number of thr user:")
+        phone[u]=p
+    elif a=='2':
+        t=input("Enter the number to searching:")
+        for i in phone.keys():
+            if phone[i]==t:
+                print("Nmae:",i)
+                print("Number:",phone[i])
+    elif a=='3':
+        u=input("Enter the name to delete:")
+        phone.pop(u)
+        print("The list after the udate:")
+        print(phone)
+    elif a=='5':
+        break
+    elif a=='4':
+        m=input("Enter the name to update:")
+        n=input("Enter the number to update:")
+        for i in phone.keys():
+            if i==m:
+                phone[i]=n
+                print(phone)
+    else:
+        print("Invalid")
+        print(phone)
